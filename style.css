@@ -1,0 +1,48 @@
+html {
+  box-sizing:border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #313131;
+}
+
+.container {
+  max-width: 800px;
+  padding: 40px 15px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 170px;
+  grid-column: span 3;
+  background: linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  color: transparent;
+  font-size: 80px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.card.open {
+  background: rgba(148,187,233,1);
+  color: #fff;
+}
+
+.card.success {
+  background: #00b285;
+  color: #000;
+  cursor: default;
+}
